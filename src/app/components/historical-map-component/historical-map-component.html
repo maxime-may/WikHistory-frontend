@@ -1,0 +1,4 @@
+<div id="map" style="height: 600px;"></div>
+
+<input min="1800" max="2025" type="number" [(ngModel)]="year" (input)="onYearChange()"/>
+<input name="yearRanger" type="range" min="1800" max="2025" step="1" [(ngModel)]="year" (input)="onYearChange()" />
