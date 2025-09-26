@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HistoricalMapComponent } from './historical-map-component';
+import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 
 describe('HistoricalMapComponent', () => {
   let component: HistoricalMapComponent;
@@ -8,7 +8,8 @@ describe('HistoricalMapComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HistoricalMapComponent]
+      imports: [HistoricalMapComponent],
+      providers: [provideHttpClient(withInterceptorsFromDi())],
     })
     .compileComponents();
 
